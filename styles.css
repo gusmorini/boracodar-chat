@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  /* dinamic size */
+  font-size: 62.5%;
+
+  /* colors */
+  --purple-900: #1a1924;
+  --purple-800: #282843;
+  --purple-700: #633bbc;
+  --green-700: #07847e;
+  --green-500: #00b37e;
+  --gray-100: #e1e1e6;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--purple-900);
+  font-size: 1.6rem;
+  color: var(--gray-100);
+}
