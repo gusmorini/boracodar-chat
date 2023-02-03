@@ -86,6 +86,7 @@ header .user-time {
 main {
   overflow-y: auto;
   padding-bottom: 2.4rem;
+  scroll-behavior: smooth;
 }
 
 main::-webkit-scrollbar {
