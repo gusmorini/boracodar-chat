@@ -34,7 +34,7 @@ body .container {
   height: 100vh;
   display: grid;
   grid-template-rows: max-content 1fr max-content;
-  max-width: 720px;
+  max-width: 880px;
   margin: 0 auto;
 }
 
@@ -84,8 +84,19 @@ header .user-time {
 }
 
 main {
-  overflow-y: scroll;
+  overflow-y: auto;
   padding-bottom: 2.4rem;
+}
+
+main::-webkit-scrollbar {
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: transparent;
+}
+
+main::-webkit-scrollbar-thumb {
+  background: var(--purple-800);
+  border-radius: 4rem;
 }
 
 main .message {
