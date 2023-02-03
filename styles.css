@@ -25,35 +25,42 @@ body {
   background-color: var(--purple-900);
   font-size: 1.6rem;
   color: var(--gray-100);
-  padding: 3.2rem;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body .container {
+  padding: 2.4rem 3.2rem;
   height: 100vh;
   display: grid;
   grid-template-rows: max-content 1fr max-content;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
-body header {
+header .user {
   display: flex;
   align-items: center;
   gap: 1.6rem;
 }
 
-body header .status {
+header .user .status {
   display: flex;
   flex-direction: column;
   font-size: 1.2rem;
   flex: 1;
 }
 
-body header .status strong {
+header .user .status strong {
   color: var(--white);
 }
 
-body header .status span {
+header .user .status span {
   color: var(--green-500);
   margin-top: 0.4rem;
 }
 
-body header .status span::before {
+header .user .status span::before {
   content: " ";
   width: 0.8rem;
   height: 0.8rem;
@@ -63,8 +70,83 @@ body header .status span::before {
   margin-right: 0.4rem;
 }
 
-body header img {
+header .user img {
   border-radius: 50%;
   width: 4.8rem;
   height: 4.8rem;
+  object-fit: cover;
+}
+
+header .user-time {
+  font-size: 1.2rem;
+  margin-top: 2.6rem;
+  text-align: center;
+}
+
+main {
+  overflow-y: scroll;
+  padding-bottom: 2.4rem;
+}
+
+main .message {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  max-width: 60vw;
+  width: fit-content;
+}
+
+main .message .body {
+  margin-top: 1rem;
+  background-color: var(--purple-700);
+  padding: 1.4rem;
+  border-radius: 0 0.8rem 0.8rem 0.8rem;
+}
+
+main .message.me {
+  margin-left: auto;
+}
+
+main .message.me .top {
+  text-align: right;
+}
+
+main .message.me .body {
+  background-color: var(--green-700);
+  border-radius: 0.8rem 0.8rem 0 0.8rem;
+}
+
+footer {
+  margin-top: 2.4rem;
+}
+
+footer form {
+  background-color: var(--purple-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.4rem 2.4rem;
+  border-radius: 999rem;
+}
+
+footer form:focus-within {
+  outline: 1px solid var(--gray-100);
+}
+
+footer form input,
+footer form button {
+  color: var(--gray-100);
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+footer form input {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+}
+
+footer form button {
+  font-size: 2.4rem;
+  cursor: pointer;
 }
